@@ -4,6 +4,6 @@ COPY package*.json ./
 RUN npm install -g nodemon
 RUN npm install
 # COPY . .
-VOLUME [ "/usr/src/app", "/compressed" ]
+VOLUME [ "/compressed" ]
 CMD [ "nodemon", "-L", "/usr/src/app/server.js" ]
 # CMD [ "node", "server.js" ]
