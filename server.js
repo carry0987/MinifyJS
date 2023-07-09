@@ -40,6 +40,12 @@ app.use(function (err, req, res, next) {
     next(err);
 });
 
+// 404 error handler
+app.use(function (req, res, next) {
+    res.status(404).json({msg: 'Not Found'});
+    next();
+});
+
 app.listen(3000, function () {
     console.log('App is listening on port 3000');
 });
