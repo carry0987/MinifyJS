@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  minifyjs:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./compressed:/compressed
+      - ./server.js:/usr/src/app/server.js
